@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/partialpaymentspage</path>
+    <page_callback>CRM_Payments_Page_PartialPayments</page_callback>
+    <title>PartialPayments</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/partialpaymentsform</path>
+    <page_callback>CRM_Payments_Form_PartialPayments</page_callback>
+    <title>PartialPayments</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>

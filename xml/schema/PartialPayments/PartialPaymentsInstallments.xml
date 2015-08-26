@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+    <base>CRM/PartialPayments</base>
+    <class>PartialPaymentsInstallments</class>
+    <name>civicrm_partial_payments_installments</name>
+    <comment></comment>
+    <log>true</log>
+
+    <field>
+        <name>id</name>
+        <type>int unsigned</type>
+        <required>true</required>
+        <comment></comment>
+    </field>
+    <primaryKey>
+        <name>id</name>
+        <autoincrement>true</autoincrement>
+    </primaryKey>
+    <field>
+        <name>contribution_id</name>
+        <uniqueName>contribution_id</uniqueName>
+        <title>Contribution ID</title>
+        <type>int unsigned</type>
+        <required>true</required>
+        <import>true</import>
+        <export>true</export>
+        <comment></comment>
+        <add>4.5</add>
+    </field>
+  
+    <field>
+        <name>primary_contact_id</name>
+        <uniqueName>primary_contact_id</uniqueName>
+        <title>Primary Contact ID</title>
+        <type>int unsigned</type>
+        <required>true</required>
+        <import>true</import>
+        <export>true</export>
+        <comment></comment>
+        <add>4.5</add>
+    </field>
+    <foreignKey>
+        <name>primary_contact_id</name>
+        <table>civicrm_contact</table>
+        <key>id</key>
+        <add>4.5</add>
+        <onDelete>CASCADE</onDelete>
+    </foreignKey>
+
+
+    <field>
+        <name>secondary_contact_id</name>
+        <uniqueName>secondary_contact_id</uniqueName>
+        <title>Secondary Contact ID</title>
+        <type>int unsigned</type>
+        <required>false</required>
+        <import>true</import>
+        <export>true</export>
+        <comment></comment>
+        <add>4.5</add>
+    </field>
+    <foreignKey>
+        <name>secondary_contact_id</name>
+        <table>civicrm_contact</table>
+        <key>id</key>
+        <add>4.5</add>
+        <onDelete>CASCADE</onDelete>
+    </foreignKey>
+
+
+    <field>
+        <name>email</name>
+        <type>varchar</type>
+        <length>255</length>
+        <comment></comment>
+        <title>Email</title>
+        <required>true</required>
+        <export>true</export>
+        <uniqueName>partial_payments_email</uniqueName>
+    </field>
+
+
+    <field>
+        <name>total_amount</name>
+        <title>Total amount</title>
+        <type>decimal</type>
+        <required>true</required>
+        <import>true</import>
+        <export>true</export>
+        <comment></comment>
+    </field>
+    <field>
+        <name>installment_amount</name>
+        <title>Installment amount</title>
+        <type>decimal</type>
+        <required>true</required>
+        <import>true</import>
+        <export>true</export>
+        <comment></comment>
+    </field>
+    <field>
+        <name>installments_count</name>
+        <title>Installlmetns Count</title>
+        <type>decimal</type>
+        <required>true</required>
+        <import>true</import>
+        <export>true</export>
+        <comment></comment>
+    </field>
+
+    <field>
+        <name>installments_remaining</name>
+        <title>Installlmetns Remaining</title>
+        <type>decimal</type>
+        <required>true</required>
+        <import>true</import>
+        <export>true</export>
+        <comment></comment>
+    </field>
+
+
+
+    <field>
+        <name>paying_date</name>
+        <type>datetime</type>
+        <required>true</required>
+    </field>
+
+
+</table>
